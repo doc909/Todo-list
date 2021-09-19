@@ -5,7 +5,7 @@ const TodoList = ({ todos, setTodos, filteredTodos }) => {
     return(
         <div className="ui middle aligned divided list">
             <div className="item">
-                {filteredTodos.map(todo => {
+            {filteredTodos.map(todo => {
                     return (<Todo
                         text={todo.text}
                         key={todo.id}
@@ -17,7 +17,6 @@ const TodoList = ({ todos, setTodos, filteredTodos }) => {
             </div>
         </div>
     );
-
 };
 
 export default TodoList

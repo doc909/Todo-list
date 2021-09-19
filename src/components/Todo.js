@@ -5,7 +5,6 @@ const Todo = ({ text, todo, todos, setTodos }) => {
     const deleteHandler = () => {
         setTodos(todos.filter(el => el.id !== todo.id));
     };
-
     // Handles changing of the todo items status from complete to uncompleteda and vice versa
     const completeHandler = () => {
         setTodos(todos.map(item => {
