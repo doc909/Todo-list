@@ -1,14 +1,17 @@
 import React, { useEffect } from 'react';
 
 const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
+    // Stores todo data to local storage
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
     });
 
+    // Handles text input
     const inputTextHandler = event => {
         setInputText(event.target.value);
     };
 
+    // Handles todo data submit
     const submitToDoHandler = event => {
         event.preventDefault();
         const currentDate = new Date();
@@ -25,6 +28,7 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         setInputText('');
     };
 
+    // Handles status change
     const statusHandler = event => {
         setStatus(event.target.value);
     };

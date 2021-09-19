@@ -17,6 +17,7 @@ const App = () => {
         filterHandler();
     }, [todos, status]);
 
+    // Filters todo list items based on their status
     const filterHandler = () => {
         switch(status) {
             case 'completed':
